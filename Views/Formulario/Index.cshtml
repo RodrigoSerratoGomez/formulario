@@ -1,0 +1,35 @@
+@model formulario.Models.Formulario
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario Web Completo</h1><br>
+    <form asp-controller="Formulario" asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <strong><label asp-for="Nombre" class="control-label"></label></strong>
+        <input asp-for="Nombre" class="form-control"><br>
+        <strong><label asp-for="Apellido" class="control-label"></label></strong>
+        <input asp-for="Apellido" class="form-control"><br>
+        <strong><label asp-for="Titulo" class="control-label"></label></strong>
+        <input asp-for="Titulo" class="form-control"><br>
+        <strong><label asp-for="Nivel" class="control-label"></label></strong>
+        <input asp-for="Nivel" class="form-control"><br>
+        <strong><label asp-for="Sexo" class="control-label"></label></strong>
+        <input asp-for="Sexo" class="form-control"><br>
+        <strong><label asp-for="Experiencia" class="control-label"></label></strong>
+        <input asp-for="Experiencia" class="form-control"><br>
+        <strong><label asp-for="Fecha" class="control-label"></label></strong>
+        <input asp-for="Fecha" class="form-control"><br>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form><br>
+    <h1>@ViewData["Message"]</h1>
+</body>
+
+</html>
