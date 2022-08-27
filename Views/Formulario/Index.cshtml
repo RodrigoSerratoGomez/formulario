@@ -11,25 +11,90 @@
 
 <body>
     <h1>Formulario Web Completo</h1><br>
+
     <form asp-controller="Formulario" asp-action="Create">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <strong><label asp-for="Nombre" class="control-label"></label></strong>
-        <input asp-for="Nombre" class="form-control"><br>
-        <strong><label asp-for="Apellido" class="control-label"></label></strong>
-        <input asp-for="Apellido" class="form-control"><br>
-        <strong><label asp-for="Titulo" class="control-label"></label></strong>
-        <input asp-for="Titulo" class="form-control"><br>
-        <strong><label asp-for="Nivel" class="control-label"></label></strong>
-        <input asp-for="Nivel" class="form-control"><br>
-        <strong><label asp-for="Sexo" class="control-label"></label></strong>
-        <input asp-for="Sexo" class="form-control"><br>
-        <strong><label asp-for="Experiencia" class="control-label"></label></strong>
-        <input asp-for="Experiencia" class="form-control"><br>
-        <strong><label asp-for="Fecha" class="control-label"></label></strong>
-        <input asp-for="Fecha" class="form-control"><br>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="form-group">
+            <!-- Text Fields -->
+            <div class="col-sm-8 col-sm-offset-2">
+                <strong><label asp-for="Nombre" class="control-label"></label></strong>
+                <input asp-for="Nombre" class="form-control">
+            </div><br>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <strong><label asp-for="Apellido" class="control-label"></label></strong>
+                <input asp-for="Apellido" class="form-control">
+            </div><br>
+
+            <div class="col-sm-8 col-sm-offset-2">
+                <strong><label asp-for="Titulo" class="control-label"></label></strong>
+                <input asp-for="Titulo" class="form-control">
+            </div><br>
+
+            <!-- Radio Buttons -->
+            <div class="input-group">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <strong><label asp-for="Nivel" class="control-label"></label></strong>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Nivel" class="control-label" type="radio" value="boton-1">
+                    Escuela Secuandaria
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Nivel" class="control-label" type="radio" value="boton-2">
+                    Universidad
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Nivel" class="control-label" type="radio" value="boton-3">
+                    Maestria
+                </div>
+            </div><br>
+
+            <!-- Checkboxes -->
+            <div class="input-group">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <strong><label asp-for="Sexo" class="control-label"></label></strong>
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Sexo" type="checkbox" value="checkbox-1">
+                    Mujer
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Sexo" type="checkbox" value="checkbox-2">
+                    Hombre
+                </div>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <input asp-for="Sexo" type="checkbox" value="checkbox-3">
+                    Prefiero no decirlo
+                </div>
+            </div><br>
+
+            <!-- Combo Box -->
+            <div class="col-sm-4 col-sm-offset-2">
+                <strong><label asp-for="Experiencia" class="control-label"></label></strong>
+                <select asp-for="Experiencia" class="form-control">
+                    <option value="0" selected>Selecciona una opcion</option>
+                    <option value="1">0-1</option>
+                    <option value="2">2-4</option>
+                    <option value="3">5-9</option>
+                    <option value="4">10+</option>
+                </select>
+            </div><br>
+
+            <!-- Date -->
+            <div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <strong><label asp-for="Fecha" class="control-label"></label></strong>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <input asp-for="Fecha" class="form-control">
+                </div>
+            </div><br>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+        </div>
     </form><br>
-    <h1>@ViewData["Message"]</h1>
+
 </body>
 
 </html>

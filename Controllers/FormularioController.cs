@@ -26,8 +26,8 @@ namespace formulario.Controllers
         [HttpPost]
         public IActionResult Create(Formulario objFormulario)
         {
-            ViewData ["Message"] = "Gracias por Enviar su Formulario.";
-            return View("Index");
+            ViewData ["Message"] = "Gracias por Enviar su Formulario";
+            return View("Result");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
